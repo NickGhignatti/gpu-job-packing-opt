@@ -1,0 +1,7 @@
+site_name: GPU job packing optimizer
+theme:
+  name: material
+
+nav:
+  - Home: index.md
+  - Architecture: architecture.md
