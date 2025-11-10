@@ -11,6 +11,8 @@ RESTful API interface for submitting ML jobs to the scheduler.
 
 > Should be built with FastAPI for high performance and easy integration with existing ML workflows ?
 
+See also [Job submission](architecture-pages/submittor.md)
+
 ### 2. ML predictor
 Resource estimation engine that analyzes incoming jobs and predicts:
 <ul>
@@ -18,6 +20,8 @@ Resource estimation engine that analyzes incoming jobs and predicts:
 <li><input type="checkbox" disabled> Runtime duration</li>
 <li><input type="checkbox" disabled> Interference level between jobs</li>
 </ul>
+
+See also [ML predictor](architecture-pages/predictor.md)
 
 ### 3. Scheduler core
 Implement the sophisticated orchestration logic:
@@ -27,6 +31,8 @@ Implement the sophisticated orchestration logic:
 <li><input type="checkbox" disabled> MPS/MIG configuration: Leverages NVIDIA Multi-Process Service and Multi-Instance GPU technologies for isolation</li>
 </ul>
 
+See also [Scheduler core](architecture-pages/scheduler.md)
+
 ### 4. Job executor
 Manages the actual execution environment:
 <ul>
@@ -34,6 +40,8 @@ Manages the actual execution environment:
 <li><input type="checkbox" disabled> Isolated execution environments per job</li>
 <li><input type="checkbox" disabled> Resource allocation and enforcement</li>
 </ul>
+
+See also [Job executor](architecture-pages/executor.md)
 
 ### 5. GPU monitor
 Real-time monitoring component that tracks:
@@ -44,3 +52,5 @@ Real-time monitoring component that tracks:
 </ul>
 
 The GPU Monitor communicates bidirectionally with the Job Executor to provide runtime insights and enable dynamic adjustments.
+
+See also [GPU monitor](architecture-pages/monitor.md)
