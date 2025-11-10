@@ -10,7 +10,7 @@ permissions:
   contents: write
 
 jobs:
-  build-documentation:
+  deploy:
     if: github.event.pull_request.merged == true && startsWith(github.event.pull_request.head.ref, 'docs')
     runs-on: ubuntu-latest
     steps:
