@@ -1,0 +1,12 @@
+# IDE files
+.vscode/
+.idea/
+
+# Binaries
+bin/
+build/
+*.exe
+
+# Go files
+vendor/
+go.work
