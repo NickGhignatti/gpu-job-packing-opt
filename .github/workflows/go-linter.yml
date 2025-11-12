@@ -1,0 +1,12 @@
+name: Go linting
+
+on:
+  push:
+    branches:
+      - "**"
+
+jobs:
+  linting:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: golangci/golangci-lint-action@v7
