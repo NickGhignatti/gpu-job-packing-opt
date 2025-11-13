@@ -31,25 +31,25 @@ type Job struct {
 }
 
 type ResourceUsage struct {
-	PeakGPUMemoryMB uint32
-	AVGGPUUtil      float32
-	Runtime         float64
-	ExitCode        int8
+	PeakGPUMemoryMB uint32  `json:"peak_gpu_memory_mb"`
+	AVGGPUUtil      float32 `json:"avggpu_util"`
+	Runtime         float64 `json:"runtime"`
+	ExitCode        int8    `json:"exit_code"`
 }
 
 type ResourceRequirements struct {
-	GPUMemoryMB    uint32
-	GPUCount       uint8
-	GPUFraction    float64
-	CPUCores       uint8
-	SystemMemoryMB uint32
+	GPUMemoryMB    uint32  `json:"gpu_memory_mb"`
+	GPUCount       uint8   `json:"gpu_count"`
+	GPUFraction    float64 `json:"gpu_fraction"`
+	CPUCores       uint8   `json:"cpu_cores"`
+	SystemMemoryMB uint32  `json:"system_memory_mb"`
 }
 
 type JobMetadata struct {
-	ModelType      string
-	BatchSize      uint16
-	SequenceLength uint16
-	NumParameters  uint32
+	ModelType      string `json:"model_type"`
+	BatchSize      uint16 `json:"batch_size"`
+	SequenceLength uint16 `json:"sequence_length"`
+	NumParameters  uint32 `json:"num_parameters"`
 	// TODO : rn we'll keep complexity level easy
 	// MixedPrecision     bool
 	// GradientCheckpoint bool
@@ -58,10 +58,10 @@ type JobMetadata struct {
 }
 
 type Placement struct {
-	GPUID       uint8
-	NodeID      string
-	UseMPS      bool
-	ContainerID string
+	GPUID       uint8  `json:"gpuid"`
+	NodeID      string `json:"node_id"`
+	UseMPS      bool   `json:"use_mps"`
+	ContainerID string `json:"container_id"`
 }
 
 func NewJob(name, image string, commands []string) *Job {
