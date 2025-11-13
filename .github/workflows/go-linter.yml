@@ -1,12 +1,21 @@
-name: Go linting
-
+name: golangci-lint
 on:
   push:
-    branches:
-      - "**"
+    branches: ["**"]
+
+permissions:
+  contents: read
 
 jobs:
-  linting:
+  golangci:
+    name: lint
     runs-on: ubuntu-latest
     steps:
-      - uses: golangci/golangci-lint-action@v7
+      - uses: actions/checkout@v5
+      - uses: actions/setup-go@v6
+        with:
+          go-version: stable
+      - name: golangci-lint
+        uses: golangci/golangci-lint-action@v8
+        with:
+          version: v2.1
