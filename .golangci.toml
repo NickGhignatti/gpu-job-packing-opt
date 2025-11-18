@@ -1,0 +1,23 @@
+[linters]
+default = "all"
+enable = [
+  "errcheck",      # Checks for unchecked errors
+  "gosimple",      # Simplifies code
+  "govet",         # Standard Go vet checks
+  "ineffassign",   # Detects ineffectual assignments
+  "staticcheck",   # Advanced static analysis
+  "unused",        # Checks for unused code
+  "gofmt",         # Checks if code is formatted
+  "goimports",     # Checks missing or unreferenced imports
+  "misspell",      # Finds commonly misspelled words
+  "revive",        # Fast configurable linter
+]
+disable = [
+  "godox",         # Detects TODO/FIXME comments
+  "cyclop",        # Cyclomatic complexity
+]
+
+[issues]
+exclude-use-default = true
+
+# [[issues.exclude-rules]]
