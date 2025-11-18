@@ -33,6 +33,8 @@ type Error struct {
 
 var (
 	ErrProviderNotFound = &Error{Message: "provider not found"}
+	ErrDeviceNotFound   = &Error{Message: "device not found"}
+	ErrNotSupported     = &Error{Message: "not supported"}
 )
 
 var globalRegistry = &Registry{
