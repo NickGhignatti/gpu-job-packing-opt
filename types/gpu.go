@@ -26,7 +26,7 @@ type GPUMetrics struct {
 	Timestamp   time.Time          `json:"timestamp"`
 	Utilization UtilizationMetrics `json:"utilization"`
 	Memory      MemoryMetrics      `json:"memory"`
-	Temperatire float32            `json:"temperatire"`
+	Temperature float32            `json:"temperature"`
 	PowerUsage  float32            `json:"power_usage"`
 	Processes   []ProcessInfo      `json:"processes"`
 }
